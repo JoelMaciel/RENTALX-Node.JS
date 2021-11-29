@@ -5,7 +5,7 @@ import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 class CreateCategoryController {
   constructor(private createCategoryUseCase: CreateCategoryUseCase) {}
 
-  haldle(request: Request, response: Response) {
+  handle(request: Request, response: Response) {
     const { name, description } = request.body;
     this.createCategoryUseCase.execute({ name, description });
     return response.status(201).send();
