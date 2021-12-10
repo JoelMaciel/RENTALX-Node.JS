@@ -37,7 +37,6 @@ class ImportCategoryUseCase {
         });
     });
   }
-
   async execute(file: Express.Multer.File): Promise<void> {
     const categories = await this.loadCategories(file);
 
