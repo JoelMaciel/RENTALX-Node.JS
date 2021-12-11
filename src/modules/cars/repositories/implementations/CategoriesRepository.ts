@@ -9,19 +9,11 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>;
 
-  // no-use-before-define
   // eslint-disable-next-line no-use-before-define
   private static INSTANCE: CategoriesRepository;
 
-  private constructor() {
+  constructor() {
     this.repository = getRepository(Category);
-  }
-
-  public static getInstance(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE) {
-      CategoriesRepository.INSTANCE = new CategoriesRepository();
-    }
-    return CategoriesRepository.INSTANCE;
   }
 
   async list(): Promise<Category[]> {
