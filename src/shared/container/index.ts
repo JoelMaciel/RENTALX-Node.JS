@@ -11,7 +11,9 @@ container.registerSingleton<ICategoriesRepository>(
   CategoriesRepository,
 );
 
+// eu faco assi
+
 container.registerSingleton<ISpecificationsRepository>(
-  'specificationsRespository',
+  'SpecificationsRepository',
   SpecificationsRepository,
 );
