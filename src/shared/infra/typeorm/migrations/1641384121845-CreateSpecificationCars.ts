@@ -18,7 +18,7 @@ export class CreateSpecificationCars1641384121845
             type: 'uuid',
           },
           {
-            name: 'specifications_id',
+            name: 'specification_id',
             type: 'uuid',
           },
           {
@@ -65,6 +65,10 @@ export class CreateSpecificationCars1641384121845
       'specifications_cars',
       'FKSpecificationCar',
     );
-    await queryRunner.dropTable('specifications_cars');
+    await queryRunner.dropForeignKey(
+      'specifications_cars',
+      'FKSpecificationsCar',
+    );
+    await queryRunner.dropTable('speifications_cars');
   }
 }
