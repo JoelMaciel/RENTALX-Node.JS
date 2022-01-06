@@ -34,7 +34,7 @@ export class CreateSpecificationCars1641384121845
       'specifications_cars',
       new TableForeignKey({
         name: 'FKSpecificationCar',
-        referencedTableName: 'Specifications',
+        referencedTableName: 'specifications',
         referencedColumnNames: ['id'],
         columnNames: ['specification_id'],
         onDelete: 'SET NULL',
