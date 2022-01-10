@@ -16,7 +16,7 @@ class CreateCarSpecificationUseCase {
     @inject('CarsRepository')
     private carsRepository: ICarsRepository,
 
-    @inject('SpecificatonsRepository')
+    @inject('SpecificationsRepository')
     private specificationsRepository: ISpecificationsRepository,
   ) {}
   async execute({ car_id, specifications_id }: IRequest): Promise<Car> {
