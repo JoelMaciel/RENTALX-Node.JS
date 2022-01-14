@@ -14,7 +14,7 @@ interface IRequest {
 @injectable()
 class DevolutionRentalUseCase {
   constructor(
-    @inject('RentalRepository')
+    @inject('RentalsRepository')
     private rentalsRepository: IRentalsRepository,
 
     @inject('CarsRepository')
@@ -23,15 +23,14 @@ class DevolutionRentalUseCase {
     @inject('DayjsDateProvider')
     private dateProvider: IDateProvider,
   ) {}
-  async execute({ id, user_id }: IRequest): Promise<Rental> {
+  async execute({ id }: IRequest): Promise<Rental> {
     const rental = await this.rentalsRepository.findById(id);
     const minimun_daily = 1;
-    const car = await this.carsRepository.findById(id);
+    const car = await this.carsRepository.findById(rental.car_id);
 
     if (!rental) {
       throw new AppError('Rental does not exists');
     }
-    // Veirifcar o tempo de Aluguel
 
     const dateNow = this.dateProvider.dateNow();
 
