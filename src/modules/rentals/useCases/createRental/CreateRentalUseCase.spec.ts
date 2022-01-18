@@ -51,10 +51,10 @@ describe('Create Rental', () => {
       car_id: '1212122',
       expected_return_date: dayAdd24Hours,
     });
-    expect(
-      await createRentalUseCase.execute({
+    await expect(
+      createRentalUseCase.execute({
         user_id: '12345',
-        car_id: '1212122',
+        car_id: '123',
         expected_return_date: dayAdd24Hours,
       }),
     ).rejects.toEqual(new AppError("There's a rental in progress for user"));
