@@ -26,7 +26,7 @@ describe('Create Car', () => {
 
   it('should not be able to create a car with exists license plate', async () => {
     await createCarUseCase.execute({
-      name: 'Car 1',
+      name: 'Car 4',
       description: 'Description Car',
       daily_rate: 100,
       license_plate: 'ABC-123',
@@ -36,7 +36,7 @@ describe('Create Car', () => {
     });
     expect(
       await createCarUseCase.execute({
-        name: 'Car 2',
+        name: 'Car 4',
         description: 'Description Car',
         daily_rate: 100,
         license_plate: 'ABC-123',
