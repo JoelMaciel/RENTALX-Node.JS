@@ -52,7 +52,7 @@ describe('Create Car', () => {
       name: 'Car 2',
       description: 'Description Car',
       daily_rate: 100,
-      license_plate: 'ABCD-123',
+      license_plate: 'ABCD-124',
       fine_amount: 60,
       brand: 'Brand',
       category_id: 'Category',
