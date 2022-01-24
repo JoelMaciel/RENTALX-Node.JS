@@ -33,7 +33,7 @@ describe('Create Category Controller', () => {
       password: 'admin',
     });
 
-    const { token } = responseToken.body;
+    const { refresh_token: token } = responseToken.body;
 
     await request(app)
       .post('/categories')

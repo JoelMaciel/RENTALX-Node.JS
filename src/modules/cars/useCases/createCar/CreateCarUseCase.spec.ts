@@ -34,8 +34,8 @@ describe('Create Car', () => {
       brand: 'Brand',
       category_id: 'Category',
     });
-    expect(
-      await createCarUseCase.execute({
+    await expect(
+      createCarUseCase.execute({
         name: 'Car 4',
         description: 'Description Car',
         daily_rate: 100,
